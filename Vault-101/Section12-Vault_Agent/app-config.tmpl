@@ -1,0 +1,8 @@
+{{ with secret "kv/data/webblog" }}
+DATABASE:
+  USERNAME: {{ .Data.data.username }}
+  PASSWORD: {{ .Data.data.password }}
+  HOST: 127.0.0.1
+  PORT: 27017
+  DB: webblog
+{{ end }}
